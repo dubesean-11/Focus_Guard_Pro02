@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dark theme overrides (Material 3 Dark) -->
+    <style name="Theme.FocusGuardPro" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#82B4FF</item>
+        <item name="colorPrimaryVariant">#4D8FDE</item>
+        <item name="colorOnPrimary">#003166</item>
+        <item name="colorSecondary">#4DD0C4</item>
+        <item name="colorSecondaryVariant">#00837A</item>
+        <item name="colorOnSecondary">#00201E</item>
+        <item name="android:colorBackground">#1C1B1F</item>
+        <item name="colorSurface">#1C1B1F</item>
+        <item name="colorOnSurface">#E6E1E5</item>
+        <item name="colorError">#FFB4AB</item>
+        <item name="colorOnError">#690005</item>
+        <item name="android:windowBackground">#1C1B1F</item>
+        <item name="android:statusBarColor">#1C1B1F</item>
+        <item name="android:navigationBarColor">#1C1B1F</item>
+    </style>
+
+    <!-- Splash screen theme (dark) -->
+    <style name="Theme.FocusGuardPro.Splash" parent="Theme.FocusGuardPro">
+        <item name="android:windowBackground">#1A73E8</item>
+        <item name="android:statusBarColor">#1A73E8</item>
+        <item name="android:navigationBarColor">#1A73E8</item>
+    </style>
+
+</resources>

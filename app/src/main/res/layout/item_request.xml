@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_md"
+    android:layout_marginEnd="@dimen/spacing_md"
+    android:layout_marginBottom="@dimen/spacing_sm"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- Request header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/spacing_sm">
+
+            <TextView
+                android:id="@+id/tvRequestApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="App Name"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_size_subtitle"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRequestStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                app:chipBackgroundColor="@color/status_pending" />
+
+        </LinearLayout>
+
+        <!-- Request message -->
+        <TextView
+            android:id="@+id/tvRequestMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please let me use this app for 30 minutes"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="@dimen/text_size_body"
+            android:layout_marginBottom="@dimen/spacing_sm" />
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/tvRequestTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Just now"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="@dimen/text_size_caption"
+            android:layout_marginBottom="@dimen/spacing_sm" />
+
+        <!-- Approve / Deny buttons (visible for parent) -->
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApprove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_sm"
+                android:text="@string/request_approve"
+                style="@style/Widget.Material3.Button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeny"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/request_deny"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

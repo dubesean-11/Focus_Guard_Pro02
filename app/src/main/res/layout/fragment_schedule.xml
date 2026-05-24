@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical">
+
+    <!-- Day selector tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabsDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabGravity="center">
+
+        <com.google.android.material.tabs.TabItem android:text="Mon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="Tue" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="Wed" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="Thu" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="Fri" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="Sat" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="Sun" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Intervals list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp" />
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tvNoIntervals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/no_intervals"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:visibility="gone" />
+
+    <!-- Add Interval FAB would be in Activity, but here's the bottom bar -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/spacing_md"
+        android:text="@string/add_interval"
+        app:icon="@android:drawable/ic_input_add" />
+
+</LinearLayout>

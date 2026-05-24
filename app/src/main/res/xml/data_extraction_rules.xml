@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Data extraction rules for Android 12+.
+    Restricts cloud and local backup of sensitive app data.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="focus_guard_secure_prefs.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="focus_guard_secure_prefs.xml" />
+    </device-transfer>
+</data-extraction-rules>

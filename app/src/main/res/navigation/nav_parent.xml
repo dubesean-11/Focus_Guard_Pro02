@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_parent"
+    app:startDestination="@id/nav_parent_dashboard">
+
+    <fragment
+        android:id="@+id/nav_parent_dashboard"
+        android:name="com.focusguardpro.ui.parent.fragments.ParentDashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_parent_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_app_locker"
+        android:name="com.focusguardpro.ui.parent.fragments.AppLockerFragment"
+        android:label="@string/nav_apps"
+        tools:layout="@layout/fragment_app_locker" />
+
+    <fragment
+        android:id="@+id/nav_schedule"
+        android:name="com.focusguardpro.ui.parent.fragments.ScheduleFragment"
+        android:label="@string/nav_schedule"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/nav_requests"
+        android:name="com.focusguardpro.ui.parent.fragments.RequestsFragment"
+        android:label="@string/nav_requests"
+        tools:layout="@layout/fragment_requests" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.focusguardpro.ui.parent.fragments.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_pairing"
+        android:name="com.focusguardpro.ui.parent.fragments.PairingFragment"
+        android:label="@string/nav_pairing"
+        tools:layout="@layout/fragment_pairing" />
+
+</navigation>

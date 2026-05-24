@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- PIN Settings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pin_settings"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rowSetPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/spacing_md"
+                    android:paddingEnd="@dimen/spacing_md"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/change_pin"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                    <TextView
+                        android:id="@+id/tvPinStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Not Set"
+                        android:textColor="@color/status_locked"
+                        android:textSize="@dimen/text_size_body" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Security Settings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/security_settings"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Device Admin row -->
+                <LinearLayout
+                    android:id="@+id/rowDeviceAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_md"
+                    android:background="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/device_admin"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/device_admin_desc"
+                            android:textColor="?attr/colorOnSurfaceVariant"
+                            android:textSize="@dimen/text_size_body" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchDeviceAdmin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/colorOutline"
+                    android:layout_marginStart="@dimen/spacing_md" />
+
+                <!-- Accessibility Service row -->
+                <LinearLayout
+                    android:id="@+id/rowAccessibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_md"
+                    android:background="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/accessibility_service"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/accessibility_desc"
+                            android:textColor="?attr/colorOnSurfaceVariant"
+                            android:textSize="@dimen/text_size_body" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAccessibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enable_accessibility"
+                        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Cloud Sync -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cloud_settings"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/firebase_not_configured"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="@dimen/text_size_body"
+                    android:layout_marginBottom="@dimen/spacing_sm" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSetupFirebase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/firebase_setup"
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Role -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/role_settings"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:id="@+id/rowSwitchRole"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/spacing_md"
+                android:paddingEnd="@dimen/spacing_md"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/switch_role"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_size_subtitle" />
+
+                <TextView
+                    android:id="@+id/tvCurrentRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parent"
+                    android:textColor="@color/parent_color"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- About -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/spacing_md"
+                android:paddingEnd="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/version"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_size_subtitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_version"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
