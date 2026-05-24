@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_child"
+    app:startDestination="@id/nav_child_home">
+
+    <fragment
+        android:id="@+id/nav_child_home"
+        android:name="com.focusguardpro.ui.child.fragments.ChildHomeFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_child_home" />
+
+    <fragment
+        android:id="@+id/nav_child_schedule"
+        android:name="com.focusguardpro.ui.child.fragments.ChildScheduleFragment"
+        android:label="@string/nav_schedule"
+        tools:layout="@layout/fragment_child_schedule" />
+
+    <fragment
+        android:id="@+id/nav_child_requests"
+        android:name="com.focusguardpro.ui.child.fragments.ChildRequestsFragment"
+        android:label="@string/nav_requests"
+        tools:layout="@layout/fragment_child_requests" />
+
+</navigation>
