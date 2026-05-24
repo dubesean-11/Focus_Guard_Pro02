@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.focusguardpro.R
 import com.focusguardpro.databinding.ActivityPinBinding
 import com.focusguardpro.utils.PinHelper
@@ -77,9 +78,11 @@ class PinActivity : AppCompatActivity() {
 
     private fun updateDots() {
         pinDots.forEachIndexed { index, dot ->
-            dot.setBackgroundResource(
-                if (index < enteredPin.length) R.color.primary
-                else android.R.color.darker_gray
+            dot.setBackgroundColor(
+                if (index < enteredPin.length)
+                    ContextCompat.getColor(this, R.color.primary)
+                else
+                    ContextCompat.getColor(this, android.R.color.darker_gray)
             )
         }
     }

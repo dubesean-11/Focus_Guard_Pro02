@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.focusguardpro.model.IntervalType
 import com.focusguardpro.model.ScheduleDay
 import com.focusguardpro.model.ScheduleInterval
 import java.util.Calendar
@@ -23,11 +22,6 @@ class ScheduleViewModel(application: Application) : AndroidViewModel(application
 
     private val _selectedDayIndex = MutableLiveData<Int>(0)
     val selectedDayIndex: LiveData<Int> = _selectedDayIndex
-
-    val selectedDayIntervals: LiveData<List<ScheduleInterval>>
-        get() = MutableLiveData(
-            _scheduleDays.value?.getOrNull(_selectedDayIndex.value ?: 0)?.intervals ?: emptyList()
-        )
 
     fun selectDay(index: Int) {
         _selectedDayIndex.value = index

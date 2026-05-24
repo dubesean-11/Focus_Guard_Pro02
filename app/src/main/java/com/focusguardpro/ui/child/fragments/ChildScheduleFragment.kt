@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.focusguardpro.adapter.ScheduleAdapter
 import com.focusguardpro.databinding.FragmentChildScheduleBinding
 import com.focusguardpro.viewmodel.ChildDashboardViewModel
-import java.util.Calendar
 
 /**
  * Child schedule fragment — read-only view of today's schedule.

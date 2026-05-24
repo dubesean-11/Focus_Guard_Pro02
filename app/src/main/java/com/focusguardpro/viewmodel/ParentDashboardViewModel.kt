@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.focusguardpro.model.AppRequest
 import com.focusguardpro.model.RequestStatus
-import com.focusguardpro.model.ScheduleInterval
 
 /**
  * ViewModel for the Parent Dashboard screen.
